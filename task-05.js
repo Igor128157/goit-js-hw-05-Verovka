@@ -39,8 +39,9 @@ class Car {
   }
 
   decelerate(value) {
-   
+    if (this.speed - value !== 0) {
     this.speed -= value; 
+    }
   }
 
   drive(hours) {

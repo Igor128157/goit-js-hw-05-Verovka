@@ -1,23 +1,23 @@
 class Storage {
   constructor(items) {
  this.items = items;
+  }
 
- this.getItems = function () {
+ getItems () {
    return this.items;
  };
 
- this.addItem = function(item) {
+ addItem (item) {
     this.items.push(item);
  };
 
- this.removeItem = function(item) {
+ removeItem (item) {
    this.items.push(item);
  
      this.items = this.items.filter(function (item, index, array) {
        return array.indexOf(item) == array.lastIndexOf(item);
      });
-   };
- };
+   }; 
 };
 
 const storage = new Storage([
@@ -35,4 +35,3 @@ console.table(storage.items);
 
 storage.removeItem('Пролонгер');
 console.table(storage.items); 
-  
