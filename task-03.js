@@ -12,12 +12,8 @@ class Storage {
  };
 
  removeItem (item) {
-   this.items.push(item);
- 
-     this.items = this.items.filter(function (item, index, array) {
-       return array.indexOf(item) == array.lastIndexOf(item);
-     });
-   }; 
+    this.items = this.items.filter(el => (el !== item));
+  }; 
 };
 
 const storage = new Storage([
